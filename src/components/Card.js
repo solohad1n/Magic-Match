@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css'
 
-const Card = ({ card }) => {
+const Card = ({ card, handleChoice }) => {
   return (
     <div className='card'>
       <div>
