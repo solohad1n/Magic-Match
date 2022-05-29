@@ -1,15 +1,20 @@
 import React from "react";
-import './style.css'
+import "./style.css";
 
-const Card = ({ card, handleChoice }) => {
+const Card = ({ card, handleChoice, flipped, disabled }) => {
+  const handleClick = () => {
+    if (!disabled) {
+      handleChoice(card);
+    }
+  };
   return (
-    <div className='card'>
-      <div>
-        <img className='front' src={card.src} alt='card-front' />
-        <img onClick={() => handleChoice(card)} className='back' src='/img/cover.png' alt='cart-back' />
+    <div className="card">
+      <div className={flipped ? "flipped" : ""}>
+        <img className="front" src={card.src} alt="card-front" />
+        <img className="back" onClick={handleClick} src="/img/cover.png" alt="card-cover" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card 
+export default Card;

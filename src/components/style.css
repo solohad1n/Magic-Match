@@ -7,7 +7,7 @@
     display: block;
     border: 2px solid #fff;
     border-radius: 6px;
-    
+    transition: 0.3s ease-in-out;
 }
 
 .card .front {
@@ -21,9 +21,9 @@
 
 .card .front {
     transform: rotateY();
-    
+
 }
 
-.flipped .front{
+.flipped .front {
     transform: rotateY(0deg);
 }
